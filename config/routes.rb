@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'pokemons/index'
 
-  get 'pokemons/show'
+  root 'pokemons#index'
 
+  resources :pokemons, only: [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
